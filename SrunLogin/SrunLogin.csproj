@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <ApplicationIcon>storage\icon.ico</ApplicationIcon>
+				<Company>sblzdddd</Company>
+				<Product>SrunLogin</Product>
+				<Description>Lightweight Srun auto login tray utility</Description>
+				<Authors>sblzdddd</Authors>
+				<Copyright>Copyright © sblzdddd $(Year)</Copyright>
+				<AssemblyVersion>1.0.0.0</AssemblyVersion>
+				<FileVersion>1.0.0.0</FileVersion>
+				<Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ManagedNativeWifi" Version="3.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="storage\logo.txt" />
+		<EmbeddedResource Include="storage\icon.ico" />
+    </ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<SelfContained>false</SelfContained>
+		<PublishSingleFile>true</PublishSingleFile>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<IncludeAllContentForSelfExtract>false</IncludeAllContentForSelfExtract>
+		<IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+
+		<PublishReadyToRun>false</PublishReadyToRun>
+
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+		<InvariantGlobalization>true</InvariantGlobalization>
+	</PropertyGroup>
+
+</Project>
