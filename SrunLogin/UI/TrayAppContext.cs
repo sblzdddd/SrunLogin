@@ -112,7 +112,7 @@ public sealed class TrayAppContext : ApplicationContext
 
             if (!NetworkDetector.IsConnectedToWiFi())
             {
-                ShowBalloon("SrunLogin", "Not connected to target WiFi.", ToolTipIcon.Warning);
+                // ShowBalloon("SrunLogin", "Not connected to target WiFi.", ToolTipIcon.Warning);
                 return;
             }
 
